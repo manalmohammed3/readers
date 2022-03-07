@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="result"
+            type="com.example.readers.data.ItemsItem" />
+        <variable
+            name="item"
+            type="com.example.readers.data.OffersItem" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/carMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            android:layout_margin="6dp"
+            android:background="#A43C241B"
+            android:clickable="true"
+            android:padding="1dp"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/myImage"
+                android:layout_width="218dp"
+                android:layout_height="155dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:scaleType="fitXY"
+                app:imageUrl="@{result.volumeInfo.imageLinks.thumbnail}"
+                tools:src="@tools:sample/backgrounds/scenic"
+                android:focusable="true" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</layout>
